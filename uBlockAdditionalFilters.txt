@@ -1,0 +1,1 @@
+twitter.com##[data-testid="tweet"]:has-text(/Promoted$/)
