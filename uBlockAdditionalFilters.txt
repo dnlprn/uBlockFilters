@@ -1,10 +1,25 @@
-twitter.com##[data-testid="tweet"]:has-text(/Promoted$/)
-twitter.com##[data-testid="tweet"]:has-text(Promoted)
-twitter.com##[data-testid="UserCell"]:has-text(Promoted)
-twitter.com##[data-focusable="true"]:has-text(/Promoted)
-twitter.com##.trends.Trends.module
-twitter.com##.dashboard-right.dashboard
-twitter.com##.module.DashboardProfileCard
-!twitter.com##article:has-text(/Promoted|Gesponsert|Реклама|Promocionado|Sponsorisé/):xpath(../..)
-twitter.com##:xpath(//span[(text()='Promoted' or text()='Gesponsert' or text()='Реклама' or text()='Promocionado'or text()='Sponsorisé']/../../../../..)
-twitter.com##[data-testid="trend"]:has-text(/Promoted|Gesponsert|Реклама|Promocionado|Sponsorisé/):xpath(..)
+! YouTube filters
+www.youtube.com##ytd-item-section-renderer:has(span:has-text(/Latest YouTube posts/i))
+youtube.com###dismissable.ytd-rich-shelf-renderer:has(span:has-text(/Latest YouTube posts/i))
+www.youtube.com##ytd-item-section-renderer:has(span:has-text(/YouTube Mixes/i))
+youtube.com###dismissable.ytd-rich-shelf-renderer:has(span:has-text(/YouTube Mixes/i))
+youtube.com##.ytp-cards-teaser
+youtube.com##.ytp-cards-button
+youtube.com##.ytp-ce-element
+youtube.com##.ytp-ce-element-shadow
+youtube.com##.ytp-ce-element-show
+youtube.com##.ytp-ce-element.ytp-ce-video.ytp-ce-element-show
+youtube.com##.ytp-ce-element.ytp-ce-channel.ytp-ce-channel-this
+youtube.com##.ytp-ce-covering-image
+youtube.com##.ytp-ce-covering-overlay
+youtube.com##.ytp-ce-expanding-image
+youtube.com##.iv-click-target
+youtube.com##ytd-horizontal-card-list-renderer.ytd-item-section-renderer:has-text(People also search for)
+www.youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-renderer.style-scope
+www.youtube.com###content > .ytd-rich-section-renderer.style-scope
+www.youtube.com###video-preview-container
+
+! News.Google.com refresh button item remove
+news.google.com###J9Hpafc199
+news.google.com##.M6tHv
+news.google.com##.misTTe.Mp2Z0b.Mh0NNb
