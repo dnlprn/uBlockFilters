@@ -19,7 +19,36 @@ www.youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-render
 www.youtube.com###content > .ytd-rich-section-renderer.style-scope
 www.youtube.com###video-preview-container
 
+
+! youtube.com##ytd-shelf-renderer.ytd-item-section-renderer:has-text(/People also watched|People also search for|For you|Related to your search|Learn while you're at home|Previously watched|Recommended videos for you/)
+
 ! News.Google.com refresh button item remove
 news.google.com###J9Hpafc199
 news.google.com##.M6tHv
 news.google.com##.misTTe.Mp2Z0b.Mh0NNb
+
+! Used when uBlock wouldn't block YouTube ads anymore
+! Youtube ads play block
+! googlevideo.com*ctier$xhr,domain=youtube.com
+
+! 2023-10-10 https://twitter.com
+twitter.com##.r-1f1sjgu.r-ymttw5.r-uaa2di.r-eqz5dr.r-1habvwh.css-1dbjc4n
+
+! 2024-02-28 https://www.ebay.it
+www.ebay.it##.recs-item-list-padding.recs-col-items-1.recs-item-list-container
+
+! 2024-03-15 https://www.reddit.com
+www.reddit.com##reddit-recent-pages
+
+! 2024-04-01 https://svilupporullino.com
+svilupporullino.com##.np-inside
+svilupporullino.com##.alpha_bulk_discounts_bar
+svilupporullino.com##.notificationPreview-box-inner
+svilupporullino.com###hide-sp
+
+! 2024-04-12 https://www.reddit.com
+www.reddit.com##recent-posts
+
+! Block posts with certain keywords on Reddit
+
+sh.reddit.com,www.reddit.com##shreddit-post:has-text(/CrowdStrike|Palestine|Palestinian|Gaza|Hamas|Israel|Israeli/i)
