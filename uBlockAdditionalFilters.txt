@@ -19,17 +19,10 @@ www.youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-render
 www.youtube.com###content > .ytd-rich-section-renderer.style-scope
 www.youtube.com###video-preview-container
 
-
-! youtube.com##ytd-shelf-renderer.ytd-item-section-renderer:has-text(/People also watched|People also search for|For you|Related to your search|Learn while you're at home|Previously watched|Recommended videos for you/)
-
 ! News.Google.com refresh button item remove
 news.google.com###J9Hpafc199
 news.google.com##.M6tHv
 news.google.com##.misTTe.Mp2Z0b.Mh0NNb
-
-! Used when uBlock wouldn't block YouTube ads anymore
-! Youtube ads play block
-! googlevideo.com*ctier$xhr,domain=youtube.com
 
 ! 2023-10-10 https://twitter.com
 twitter.com##.r-1f1sjgu.r-ymttw5.r-uaa2di.r-eqz5dr.r-1habvwh.css-1dbjc4n
@@ -50,5 +43,20 @@ svilupporullino.com###hide-sp
 www.reddit.com##recent-posts
 
 ! Block posts with certain keywords on Reddit
-
 sh.reddit.com,www.reddit.com##shreddit-post:has-text(/CrowdStrike|Palestine|Palestinian|Gaza|Hamas|Israel|Israeli/i)
+
+! 6 Nov 2024 https://www.fondoest.it
+www.fondoest.it###cookie-mask
+
+! 3 Sept 2025 https://mail.proton.me
+mail.proton.me##.py-2.justify-space-between.flex-nowrap.flex
+mail.proton.me##.mt-2.px-3.app-infos.shrink-0
+
+! Smaller thumbnails on home page
+www.youtube.com##.ytd-rich-grid-renderer {  --ytd-rich-grid-items-per-row: 6;}
+
+youtube.com##+js(set, yt.config_.openPopupConfig.supportedPopups.adBlockMessageViewModel, false)
+youtube.com##+js(set, Object.prototype.adBlocksFound, 0)
+youtube.com##+js(set, ytplayer.config.args.raw_player_response.adPlacements, [])
+youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
+
