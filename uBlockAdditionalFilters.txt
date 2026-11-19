@@ -1,8 +1,12 @@
-! YouTube filters
-www.youtube.com##ytd-item-section-renderer:has(span:has-text(/Latest YouTube posts/i))
-youtube.com###dismissable.ytd-rich-shelf-renderer:has(span:has-text(/Latest YouTube posts/i))
-www.youtube.com##ytd-item-section-renderer:has(span:has-text(/YouTube Mixes/i))
-youtube.com###dismissable.ytd-rich-shelf-renderer:has(span:has-text(/YouTube Mixes/i))
+! Title: dnlprn's additional filters
+! Description: Personal cosmetic and annoyance filters for uBlock Origin
+! Homepage: https://github.com/dnlprn/uBlockFilters
+! Expires: 7 days
+!
+! Format: uBlock Origin filter list. Import via:
+! https://raw.githubusercontent.com/dnlprn/uBlockFilters/main/uBlockAdditionalFilters.txt
+
+! --- YouTube: hide end screens, cards, "info cards" ---
 youtube.com##.ytp-cards-teaser
 youtube.com##.ytp-cards-button
 youtube.com##.ytp-ce-element
@@ -14,49 +18,41 @@ youtube.com##.ytp-ce-covering-image
 youtube.com##.ytp-ce-covering-overlay
 youtube.com##.ytp-ce-expanding-image
 youtube.com##.iv-click-target
+
+! --- YouTube: hide homepage shelves (posts, mixes) ---
+! NOTE: marked for re-verification, YouTube shelf markup changes often
+www.youtube.com##ytd-item-section-renderer:has(span:has-text(/Latest YouTube posts/i))
+www.youtube.com##ytd-item-section-renderer:has(span:has-text(/YouTube Mixes/i))
+
+! --- YouTube: hide "People also search for" and rich sections ---
 youtube.com##ytd-horizontal-card-list-renderer.ytd-item-section-renderer:has-text(People also search for)
 www.youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-renderer.style-scope
 www.youtube.com###content > .ytd-rich-section-renderer.style-scope
+
+! --- YouTube: hide hover video previews on home page ---
 www.youtube.com###video-preview-container
 
-! News.Google.com refresh button item remove
-news.google.com###J9Hpafc199
-news.google.com##.M6tHv
-news.google.com##.misTTe.Mp2Z0b.Mh0NNb
+! --- YouTube: smaller thumbnails on home page (6 per row) ---
+www.youtube.com##.ytd-rich-grid-renderer {  --ytd-rich-grid-items-per-row: 6;}
 
-! 2023-10-10 https://twitter.com
-twitter.com##.r-1f1sjgu.r-ymttw5.r-uaa2di.r-eqz5dr.r-1habvwh.css-1dbjc4n
+! --- Reddit: hide sidebar junk and keyword posts ---
+www.reddit.com##reddit-recent-pages
+www.reddit.com##recent-posts
+sh.reddit.com,www.reddit.com##shreddit-post:has-text(/CrowdStrike|Palestine|Palestinian|Gaza|Hamas|Israel|Israeli/i)
 
-! 2024-02-28 https://www.ebay.it
+! --- eBay.it: hide recommendation shelf ---
 www.ebay.it##.recs-item-list-padding.recs-col-items-1.recs-item-list-container
 
-! 2024-03-15 https://www.reddit.com
-www.reddit.com##reddit-recent-pages
-
-! 2024-04-01 https://svilupporullino.com
+! --- svilupporullino.com: hide shop clutter ---
 svilupporullino.com##.np-inside
 svilupporullino.com##.alpha_bulk_discounts_bar
 svilupporullino.com##.notificationPreview-box-inner
 svilupporullino.com###hide-sp
 
-! 2024-04-12 https://www.reddit.com
-www.reddit.com##recent-posts
-
-! Block posts with certain keywords on Reddit
-sh.reddit.com,www.reddit.com##shreddit-post:has-text(/CrowdStrike|Palestine|Palestinian|Gaza|Hamas|Israel|Israeli/i)
-
-! 6 Nov 2024 https://www.fondoest.it
+! --- fondoest.it: hide cookie mask overlay ---
 www.fondoest.it###cookie-mask
 
-! 3 Sept 2025 https://mail.proton.me
+! --- mail.proton.me: hide app info panels ---
+! NOTE: fragile, Proton markup changes often. Re-verify if it stops working.
 mail.proton.me##.py-2.justify-space-between.flex-nowrap.flex
 mail.proton.me##.mt-2.px-3.app-infos.shrink-0
-
-! Smaller thumbnails on home page
-www.youtube.com##.ytd-rich-grid-renderer {  --ytd-rich-grid-items-per-row: 6;}
-
-youtube.com##+js(set, yt.config_.openPopupConfig.supportedPopups.adBlockMessageViewModel, false)
-youtube.com##+js(set, Object.prototype.adBlocksFound, 0)
-youtube.com##+js(set, ytplayer.config.args.raw_player_response.adPlacements, [])
-youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
-
